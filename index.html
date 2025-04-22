@@ -1,1 +1,21 @@
-<!-- index.html: 商品展示页面 -->
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>红帽黑客自学箱子</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🔥 红帽黑客自学箱子 🔥</h1>
+    <img src="assets/hacker-box.png" alt="黑客工具箱" class="product-image">
+    <p class="price">原价：<del>$199.99</del></p>
+    <p class="discounted-price">优惠价：<span id="final-price">$199.99</span></p>
+    <input type="text" id="coupon" placeholder="输入优惠码" />
+    <button onclick="applyCoupon()">使用优惠券</button>
+    <br><br>
+    <button class="order-button" onclick="placeOrder()">立即下单</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
