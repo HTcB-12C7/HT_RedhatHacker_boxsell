@@ -1,1 +1,49 @@
 /* style.css: 黑+黄+白主题样式 */
+body {
+  margin: 0;
+  background-color: #000;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+}
+
+.container {
+  padding: 30px;
+}
+
+h1 {
+  color: #FFD700;
+}
+
+.product-image {
+  width: 300px;
+  margin: 20px 0;
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #FFD700;
+  background: #111;
+  color: #fff;
+}
+
+button {
+  background: #FFD700;
+  color: #000;
+  font-weight: bold;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #fff000;
+}
+
+.explosion {
+  width: 300px;
+  margin-top: 20px;
+}
