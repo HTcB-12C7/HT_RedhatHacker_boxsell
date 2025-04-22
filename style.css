@@ -1,7 +1,7 @@
 /* style.css: 黑+黄+白主题样式 */
 body {
   margin: 0;
-  background-color: #000;
+  background-color: #5C4033; /* 棕色背景 */
   color: #fff;
   font-family: 'Segoe UI', sans-serif;
   text-align: center;
@@ -9,14 +9,20 @@ body {
 
 .container {
   padding: 30px;
+  max-width: 480px;
+  margin: auto;
 }
 
 h1 {
   color: #FFD700;
+  font-size: 26px;
 }
 
 .product-image {
-  width: 300px;
+  width: 100%;
+  max-width: 320px;
+  border: 3px solid #000;
+  border-radius: 12px;
   margin: 20px 0;
 }
 
@@ -24,8 +30,11 @@ input {
   padding: 10px;
   font-size: 16px;
   border: 2px solid #FFD700;
-  background: #111;
+  background: #222;
   color: #fff;
+  width: 60%;
+  max-width: 220px;
+  border-radius: 6px;
 }
 
 button {
@@ -33,17 +42,23 @@ button {
   color: #000;
   font-weight: bold;
   padding: 12px 24px;
-  border: none;
+  border: 2px solid #000;
   cursor: pointer;
-  font-size: 18px;
-  margin-top: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  margin: 10px 6px;
 }
 
 button:hover {
   background: #fff000;
 }
 
+.discounted-price {
+  font-size: 20px;
+  font-weight: bold;
+}
+
 .explosion {
-  width: 300px;
+  width: 280px;
   margin-top: 20px;
 }
