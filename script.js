@@ -1,17 +1,15 @@
 // script.js: 前端交互逻辑
-function applyCoupon() {
-  document.getElementById('final-price').textContent = '￥0.000';
-  alert('优惠码已使用，价格已减至￥0.000！');
-}
 
 function placeOrder() {
   window.location.href = 'success.html';
 }
+
 // 点击头像展开详细信息
 function toggleAccountInfo() {
   const popup = document.getElementById("accountPopup");
   popup.style.display = popup.style.display === "block" ? "none" : "block";
 }
+
 // 汇率：1 USD = 7.8 CNY（可按需调整）
 const EXCHANGE_RATE = 7.8;
 
@@ -39,7 +37,7 @@ function renderPrices(lang) {
 
 // 语言切换
 function switchLanguage(lang) {
-  // 切换标题和按钮
+  // 切换标题和按钮文案
   if (lang === 'en') {
     document.querySelector('h1').textContent = 'Red Hat Hacker DIY Box';
     document.getElementById('coupon').placeholder = 'Enter coupon';
@@ -51,20 +49,19 @@ function switchLanguage(lang) {
     document.querySelector("button[onclick='applyCoupon()']").textContent = '使用优惠券';
     document.getElementById('order-button').textContent = '立即下单';
   }
-  // 最后更新价格
+  // 更新价格
   renderPrices(lang);
 }
 
-// 绑定下拉 & 初始化
+// 使用优惠券：改 data-cny 并重新渲染
+function applyCoupon() {
+  const discEl = document.getElementById('disc-price');
+  discEl.dataset.cny = '0.000';  // 优惠价清零
+  alert('✅ 优惠码已使用，价格已减至￥0.000！');
+  switchLanguage(document.getElementById('languageDropdown').value);
+}
+
+// 绑定下拉 & 首次渲染
 const langDropdown = document.getElementById('languageDropdown');
 langDropdown.addEventListener('change', () => switchLanguage(langDropdown.value));
 switchLanguage(langDropdown.value);
-
-// 使用优惠券时也要重新渲染
-function applyCoupon() {
-  const discEl = document.getElementById('disc-price');
-  // 这里将优惠价直接清零
-  discEl.dataset.cny = '0.000';
-  alert('✅ 优惠码已使用，价格已减至￥0.000！');
-  switchLanguage(langDropdown.value);
-}
