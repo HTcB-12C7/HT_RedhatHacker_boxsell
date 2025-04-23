@@ -54,4 +54,3 @@ function switchLanguage(lang) {
 const langDropdown = document.getElementById('languageDropdown');
 langDropdown.addEventListener('change', () => switchLanguage(langDropdown.value));
 switchLanguage(langDropdown.value);
-}
