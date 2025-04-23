@@ -98,3 +98,19 @@ button:hover {
 .account-popup div {
   margin-bottom: 8px;
 }
+/* 语言切换 */
+.language-selector {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 9999;
+}
+
+.language-selector select {
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #FFD700;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+}
