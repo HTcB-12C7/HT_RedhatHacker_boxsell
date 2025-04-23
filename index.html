@@ -7,10 +7,10 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- 左上角账户信息卡片 -->
-<div class="account-info">
-  <img src="assets/ht-avatar.png" alt="头像">
-  <div class="account-text">
+  <!-- 左上角头像 + 弹出信息 -->
+<div class="account-toggle">
+  <img src="assets/ht-avatar.png" alt="头像" onclick="toggleAccountInfo()">
+  <div class="account-popup" id="accountPopup">
     <div><strong>姓名：</strong>HTc</div>
     <div><strong>身份证：</strong>HT10001</div>
     <div><strong>银行卡号：</strong>6222 6222 8888 8899</div>
