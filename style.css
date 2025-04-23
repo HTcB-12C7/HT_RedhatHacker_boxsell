@@ -83,7 +83,7 @@ button:hover {
   display: none;
   position: absolute;
   top: 60px;
-  right: 58px; /* 👈 关键：往左展开 */
+  right: 27px; /* 👈 关键：往左展开 */
   background-color: rgba(0, 0, 0, 0.85);
   padding: 16px 18px;
   border-radius: 12px;
