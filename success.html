@@ -2,17 +2,27 @@
 <html lang="zh">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>下单成功</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
-    <h1>✅ 下单成功！</h1>
-    <p>感谢您的支持，您的红帽黑客自学箱即将发货！</p>
-    <img src="assets/explosion.png" alt="暴金特效" class="explosion">
+    <h1 id="success-title">✅ 下单成功！</h1>
+    <p id="success-msg">感谢您的支持，您的黑客工具箱即将发货！</p>
+    <img src="assets/explosion.gif" alt="暴金特效" class="explosion">
     <audio autoplay>
       <source src="assets/safeway_checkout_sound.mp3" type="audio/mpeg">
     </audio>
   </div>
+
+  <script>
+    // 根据之前存的语言显示中/英
+    const lang = localStorage.getItem('lang') || 'zh';
+    if (lang === 'en') {
+      document.getElementById('success-title').textContent = '✅ Order Successful!';
+      document.getElementById('success-msg').textContent = 'Thank you for your purchase, your hacker box will be shipped soon!';
+    }
+  </script>
 </body>
 </html>
