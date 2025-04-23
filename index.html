@@ -15,23 +15,29 @@
     </select>
   </div>
 
-  <!-- 左上角头像 + 弹出信息 -->
+  <!-- 左上角头像（单独显示） -->
   <div class="account-toggle">
-    <img src="assets/ht-avatar.png" alt="头像" onclick="toggleAccountInfo()">
+    <img src="assets/ht-avatar.png"
+         alt="头像"
+         onclick="toggleAccountInfo()">
+    <!-- 弹出详情框 -->
     <div class="account-popup" id="accountPopup">
       <div id="account-name"><strong>姓名：</strong>HTc</div>
       <div id="account-id"><strong>身份证：</strong>HT10001</div>
       <div id="account-bank"><strong>银行卡号：</strong>1530 0089 8607 2871</div>
-      <div id="account-addr"><strong>地址：</strong>上海市 徐汇县 川东新区 728弄 黑铁快递柜</div>
+      <div id="account-addr"><strong>地址：</strong>上海市 徐汇区 川东新区 728弄 黑铁快递柜</div>
     </div>
   </div>
 
   <div class="container">
     <h1 id="main-title">🔥 红帽黑客自学箱子 🔥</h1>
 
-    <img src="assets/hacker-box.png" alt="黑客工具箱" class="product-image">
+    <!-- 产品图片 -->
+    <img src="assets/hacker-box.png"
+         alt="黑客工具箱"
+         class="product-image">
 
-    <!-- 价格区块 -->
+    <!-- —— 价格区块 —— -->
     <p class="price">
       <span id="orig-price" data-cny="78.978"></span>
     </p>
@@ -39,13 +45,18 @@
       <span id="disc-label"></span>
       <span id="disc-price" data-cny="78.978"></span>
     </p>
+    <!-- —— 价格区块结束 —— -->
 
+    <!-- 优惠码 -->
     <input type="text" id="coupon" placeholder="输入优惠码" />
     <button onclick="applyCoupon()">使用优惠券</button>
 
+    <!-- 下单按钮 -->
     <br><br>
-    <button id="order-button" class="order-button" onclick="placeOrder()">立即下单</button>
-  </div> <!-- .container 结束 -->
+    <button id="order-button" class="order-button" onclick="placeOrder()">
+      立即下单
+    </button>
+  </div> <!-- /.container -->
 
   <script src="script.js"></script>
 </body>
