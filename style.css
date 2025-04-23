@@ -101,16 +101,26 @@ button:hover {
 /* 语言切换 */
 .language-selector {
   position: absolute;
-  top: 12px;
-  left: 12px;
+  top: 0;
+  left: 0;
   z-index: 9999;
+  background-color: #007BFF; /* 蓝色背景 */
+  padding: 8px 10px;
+  border-bottom: 2px solid #000;
+  border-right: 2px solid #000;
+  border-bottom-right-radius: 10px;
 }
 
 .language-selector select {
-  background-color: #222;
-  color: #fff;
-  border: 1px solid #FFD700;
-  padding: 4px 8px;
+  font-size: 16px;           /* 文字更大 */
+  padding: 6px 10px;
+  border: 2px solid #000;    /* 黑色边框 */
+  background-color: #fff;    /* 白底选项 */
+  color: #000;
   border-radius: 6px;
-  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
 }
+
+
+
