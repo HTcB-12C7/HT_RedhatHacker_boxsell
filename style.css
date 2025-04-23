@@ -67,13 +67,13 @@ button:hover {
 .account-toggle {
   position: absolute;
   top: 12px;
-  left: 12px;
+  right: 12px;
   z-index: 9999;
 }
 
 .account-toggle img {
-  width: 42px;
-  height: 42px;
+  width: 48px;
+  height: 49px;
   border-radius: 50%;
   border: 2px solid #FFD700;
   cursor: pointer;
