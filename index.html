@@ -7,6 +7,13 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- 语言选择器 -->
+<div class="language-selector">
+  <select id="languageDropdown" onchange="switchLanguage(this.value)">
+    <option value="zh">中文</option>
+    <option value="en">English</option>
+  </select>
+</div>
   <!-- 左上角头像 + 弹出信息 -->
 <div class="account-toggle">
   <img src="assets/61892f13-66e7-412f-9881-00ddea29080b.png" alt="头像" onclick="toggleAccountInfo()">
