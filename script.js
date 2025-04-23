@@ -7,3 +7,8 @@ function applyCoupon() {
 function placeOrder() {
   window.location.href = 'success.html';
 }
+// 点击头像展开详细信息
+function toggleAccountInfo() {
+  const popup = document.getElementById("accountPopup");
+  popup.style.display = popup.style.display === "block" ? "none" : "block";
+}
