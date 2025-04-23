@@ -1,31 +1,92 @@
 /* style.css: 黑+黄+白主题样式 */
+/* 全局 & 容器 */
 body {
   margin: 0;
-  background-color: #5C4033; /* 棕色背景 */
+  background-color: #5C4033;
   color: #fff;
   font-family: 'Segoe UI', sans-serif;
-  text-align: center;
 }
-
 .container {
   padding: 30px;
   max-width: 480px;
-  margin: auto;
+  margin: 80px auto 40px;
+  text-align: center;
 }
 
+/* 语言选择 */
+.language-selector {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.language-selector select {
+  font-size: 16px;
+  padding: 6px 10px;
+  border: 2px solid #000;
+  background-color: #fff;
+  color: #000;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* 头像 & 弹窗 */
+.account-toggle {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 9999;
+}
+.account-toggle img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 2px solid #FFD700;
+  cursor: pointer;
+}
+.account-popup {
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: rgba(0,0,0,0.85);
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-size: 13px;
+  color: #fff;
+  line-height: 1.6;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+  text-align: left;
+  width: 200px;
+}
+.account-popup div {
+  margin-bottom: 6px;
+}
+
+/* 标题 */
 h1 {
   color: #FFD700;
   font-size: 26px;
 }
 
+/* 产品图 */
 .product-image {
   width: 100%;
-  max-width: 320px;
+  max-width: 300px;
   border: 3px solid #000;
   border-radius: 12px;
   margin: 20px 0;
 }
 
+/* 价格 */
+.price,
+.discounted-price {
+  font-size: 18px;
+  margin: 8px 0;
+}
+
+/* 输入框 & 按钮 */
 input {
   padding: 10px;
   font-size: 16px;
@@ -36,7 +97,6 @@ input {
   max-width: 220px;
   border-radius: 6px;
 }
-
 button {
   background: #FFD700;
   color: #000;
@@ -48,79 +108,19 @@ button {
   border-radius: 8px;
   margin: 10px 6px;
 }
-
 button:hover {
   background: #fff000;
 }
 
-.discounted-price {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.explosion {
-  width: 280px;
-  margin-top: 20px;
-}
-
-/* 账户 */
-.account-toggle {
-  position: absolute;
-  top: 12px;
-  right: 12px;
+/* 爆炸特效 */
+#explosion-effect {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 9999;
-}
-
-.account-toggle img {
-  width: 48px;
-  height: 49px;
-  border-radius: 50%;
-  border: 2px solid #FFD700;
-  cursor: pointer;
-}
-
-.account-popup {
   display: none;
-  position: absolute;
-  top: 60px;
-  right: 27px; /* 👈 关键：往左展开 */
-  background-color: rgba(0, 0, 0, 0.85);
-  padding: 16px 18px;
-  border-radius: 12px;
-  font-size: 14px;
-  color: #fff;
-  width: 220px;
-  line-height: 1.8;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-  text-align: left;
 }
-
-.account-popup div {
-  margin-bottom: 8px;
+#explosion-effect img {
+  width: 300px;
 }
-/* 语言切换 */
-.language-selector {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 9999;
-  background-color: #007BFF; /* 蓝色背景 */
-  padding: 8px 10px;
-  border-bottom: 2px solid #000;
-  border-right: 2px solid #000;
-  border-bottom-right-radius: 10px;
-}
-
-.language-selector select {
-  font-size: 16px;           /* 文字更大 */
-  padding: 6px 10px;
-  border: 2px solid #000;    /* 黑色边框 */
-  background-color: #fff;    /* 白底选项 */
-  color: #000;
-  border-radius: 6px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-
-
