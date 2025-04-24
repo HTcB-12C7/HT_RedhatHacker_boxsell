@@ -50,7 +50,8 @@ body {
   display: none;
   position: absolute;
   top: 50px;
-  right: 0;
+  right: 12px;            /* ← 从 0 改为 12px */
+  left: auto;             /* ← 确保没有 left 定位干扰 */
   background-color: rgba(0,0,0,0.85);
   padding: 12px 14px;
   border-radius: 10px;
