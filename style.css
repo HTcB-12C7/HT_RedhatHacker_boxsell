@@ -17,9 +17,10 @@ body {
 .language-selector {
   position: absolute;
   top: 12px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 12px;
+  transform: none;
 }
+
 .language-selector select {
   font-size: 16px;
   padding: 6px 10px;
