@@ -12,7 +12,7 @@ function toggleAccountInfo() {
 // 汇率
 const EXCHANGE_RATE = 7.8;
 
-// 渲染价格
+// 渲染价格（根据 data-cny）
 function renderPrices(lang) {
   const origEl = document.getElementById('orig-price');
   const discEl = document.getElementById('disc-price');
@@ -24,20 +24,18 @@ function renderPrices(lang) {
     const usdDisc = (cnyDisc / EXCHANGE_RATE).toFixed(2);
     origEl.textContent = `Original: $${usdOrig}`;
     discEl.textContent = `Now: $${usdDisc}`;
-    document.getElementById('disc-label').textContent = '';
   } else {
     origEl.textContent = `原价：￥${cnyOrig.toFixed(3)}`;
     discEl.textContent = `优惠价：￥${cnyDisc.toFixed(3)}`;
-    document.getElementById('disc-label').textContent = '';
   }
 }
 
-// 语言切换
+// 切换语言并翻译所有文案
 function switchLanguage(lang) {
-  // 保存到 localStorage 以便 success.html 读取
+  // 将当前语言存储，success 页读取
   localStorage.setItem('lang', lang);
 
-  // 主标题 & 按钮文案
+  // 标题 & 按钮
   if (lang === 'en') {
     document.getElementById('main-title').textContent = 'Red Hat Hacker DIY Box';
     document.getElementById('coupon').placeholder = 'Enter coupon';
@@ -58,13 +56,14 @@ function switchLanguage(lang) {
     document.getElementById('account-name').innerHTML = '<strong>姓名：</strong>HTc';
     document.getElementById('account-id').innerHTML   = '<strong>身份证：</strong>HT10001';
     document.getElementById('account-bank').innerHTML = '<strong>银行卡号：</strong>1530 0089 8607 2871';
-    document.getElementById('account-addr').innerHTML = '<strong>地址：</strong>上海市 徐汇县 川东新区 728弄 黑铁快递柜';
+    document.getElementById('account-addr').innerHTML = '<strong>地址：</strong>上海市 徐汇区 川东新区 728弄 黑铁快递柜';
   }
 
+  // 更新价格显示
   renderPrices(lang);
 }
 
-// 使用优惠券
+// 使用优惠券：清零并弹窗，支持中/英
 function applyCoupon() {
   const lang = localStorage.getItem('lang') || 'zh';
   const discEl = document.getElementById('disc-price');
@@ -79,7 +78,7 @@ function applyCoupon() {
   switchLanguage(lang);
 }
 
-// 绑定 & 初始化
+// 启动时绑定事件并首次渲染
 document.addEventListener('DOMContentLoaded', () => {
   const langDropdown = document.getElementById('languageDropdown');
   langDropdown.addEventListener('change', () => switchLanguage(langDropdown.value));
