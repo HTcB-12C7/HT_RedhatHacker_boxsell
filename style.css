@@ -32,20 +32,6 @@ body {
   cursor: pointer;
 }
 
-/* 头像 & 弹窗 */
-.account-toggle {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  z-index: 9999;
-}
-.account-toggle img {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  border: 2px solid #FFD700;
-  cursor: pointer;
-}
 .account-popup {
   display: none;
   position: absolute;
