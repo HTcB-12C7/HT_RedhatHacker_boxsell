@@ -105,6 +105,18 @@
       const popup = document.getElementById('accountPopup');
       popup.style.display = popup.style.display === 'none' ? 'block' : 'none';
     }
+
+  window.addEventListener('load', function () {
+    const toggle = document.getElementById("lang-toggle");
+    const box = document.getElementById("google_translate_element");
+    if (toggle && box) {
+      toggle.addEventListener("click", () => {
+        box.style.visibility = (box.style.visibility === "hidden") ? "visible" : "hidden";
+      });
+    }
+  });
+
+
   </script>
 
 <html lang="zh">
