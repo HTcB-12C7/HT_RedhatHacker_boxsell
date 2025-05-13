@@ -59,6 +59,15 @@
                   </div>
                 </div>
 
+		    <!-- 🔁 自定义中英文切换按钮 -->
+<div class="language-selector" style="position: absolute; left: 10px; top: 10px;">
+  <select id="languageDropdown" onchange="switchLanguage(this.value)">
+    <option value="zh">中文</option>
+    <option value="en">English</option>
+  </select>
+</div>
+
+
                 <!-- Google 翻译语言框（请放在最外面，不嵌套在上面的 div 中） -->
                 <div id="google_translate_element" style="
                     position: absolute;
